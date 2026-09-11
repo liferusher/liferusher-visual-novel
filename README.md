@@ -30,14 +30,35 @@ Then use the rest as lookup:
 | [`11-scene-construction.md`](docs/11-scene-construction.md) | Building a scene from zero |
 | [`12-glossary.md`](docs/12-glossary.md) | You hit a term like *nakige*, *kinetic novel*, *tsukkomi* |
 | [`13-self-edit-checklist.md`](docs/13-self-edit-checklist.md) | A draft is done and you're revising |
+| [`14-script-format-and-engine.md`](docs/14-script-format-and-engine.md) | Turning craft rules into actual script syntax |
+| [`15-scope-and-production.md`](docs/15-scope-and-production.md) | Planning the project, before you over-commit |
 
 ## Templates & examples
 
 - [`templates/scene-skeleton.md`](templates/scene-skeleton.md) — blank scene structure with beat slots
 - [`templates/character-voice-sheet.md`](templates/character-voice-sheet.md) — fill one per speaking character
 - [`templates/route-outline.md`](templates/route-outline.md) — common-route / branch planning grid
+- [`templates/style-sheet.md`](templates/style-sheet.md) — lock your conventions before chapter 2
 - [`examples/before-after.md`](examples/before-after.md) — annotated rewrites of weak VN prose
 - [`examples/sample-scene.md`](examples/sample-scene.md) — one complete scene, written to these rules, with margin notes
+
+## Tools
+
+```bash
+tools/vn-lint.sh game/script.rpy     # prose linter: the docs/13 patterns, runnable
+tools/vn-lint.sh --quiet game/       # counts only
+tools/vn-lint.sh --only filter game/ # one rule at a time
+```
+
+It reports *candidates*, not errors. Several rules are deliberately correct
+inside dialogue. A clean run is not the goal.
+
+## If you only take three things
+
+1. **Split your boxes.** The click is punctuation — see [`docs/04`](docs/04-pacing-and-the-text-box.md).
+2. **Narration should complicate dialogue, never echo it** — see [`docs/02`](docs/02-narration-and-voice.md).
+3. **Make the first one short.** A finished two-hour VN beats an abandoned forty-hour
+   one — see [`docs/15`](docs/15-scope-and-production.md).
 
 ## The one-paragraph version
 
