@@ -51,7 +51,10 @@ Terms you'll hit in VN communities, dev docs, and reviews.
 | **Denpa** | Disorienting, paranoid, reality-unstable psychological work. |
 | **Doujin** | Independent/self-published. |
 
-## Character archetypes (shorthand, not destinations — see ch. 3)
+## Character archetypes (shorthand, not destinations)
+
+Quick definitions only. For why each works, its failure mode, and how to make it
+load-bearing, see `docs/16-character-tropes.md`.
 
 | Term | Meaning |
 |---|---|

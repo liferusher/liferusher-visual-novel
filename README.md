@@ -32,6 +32,8 @@ Then use the rest as lookup:
 | [`13-self-edit-checklist.md`](docs/13-self-edit-checklist.md) | A draft is done and you're revising |
 | [`14-script-format-and-engine.md`](docs/14-script-format-and-engine.md) | Turning craft rules into actual script syntax |
 | [`15-scope-and-production.md`](docs/15-scope-and-production.md) | Planning the project, before you over-commit |
+| [`16-character-tropes.md`](docs/16-character-tropes.md) | Designing a cast — archetypes, why they work, how to deepen them |
+| [`17-scene-tropes.md`](docs/17-scene-tropes.md) | Writing a set-piece: festival, confession, rooftop, hospital |
 
 ## Templates & examples
 
@@ -39,6 +41,7 @@ Then use the rest as lookup:
 - [`templates/character-voice-sheet.md`](templates/character-voice-sheet.md) — fill one per speaking character
 - [`templates/route-outline.md`](templates/route-outline.md) — common-route / branch planning grid
 - [`templates/style-sheet.md`](templates/style-sheet.md) — lock your conventions before chapter 2
+- [`templates/trope-plan.md`](templates/trope-plan.md) — cast audit + set-piece inventory
 - [`examples/before-after.md`](examples/before-after.md) — annotated rewrites of weak VN prose
 - [`examples/sample-scene.md`](examples/sample-scene.md) — one complete scene, written to these rules, with margin notes
 

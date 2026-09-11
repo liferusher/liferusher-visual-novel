@@ -43,12 +43,18 @@ fi
 
 TOTAL=0
 
+# rule <name> <pattern> <note> [exclude-pattern]
+# exclude-pattern drops lines that match it, for constructions that share a
+# word with the rule but aren't the thing the rule is looking for.
 rule() {
-  local name="$1" pattern="$2" note="$3"
+  local name="$1" pattern="$2" note="$3" exclude="${4:-}"
   [ -n "$ONLY" ] && [ "$ONLY" != "$name" ] && return 0
 
   local hits count
   hits="$(SEARCH "$pattern")"
+  if [ -n "$exclude" ] && [ -n "$hits" ]; then
+    hits="$(printf '%s\n' "$hits" | grep -vEi -e "$exclude" || true)"
+  fi
   count="$(printf '%s' "$hits" | grep -c . || true)"
   TOTAL=$((TOTAL + count))
 
@@ -74,7 +80,8 @@ rule think-filter \
 
 rule intensifier \
   '\b(very|really|quite|rather|extremely|totally|literally|basically|somewhat|utterly)\b' \
-  'Kill in NARRATION. Keep in DIALOGUE as character fingerprint.'
+  'Kill in NARRATION. Keep in DIALOGUE as character fingerprint.' \
+  'rather than'
 
 rule adverb-tag \
   '\b(said|asked|replied|answered|shouted|whispered|muttered|murmured) [a-z]+ly\b' \
